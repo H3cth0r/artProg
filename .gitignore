@@ -1,0 +1,4 @@
+# adding vim made files
+*.un~
+*.md~
+*.gitignore~
