@@ -1,22 +1,20 @@
-'''Paint, for drawing shapes.
+"""
+Juego: Paint
+Programador 1: Luis José González
+Programador 2: ??????
+Programador 3: Luis Angel Gonzalez
 
-Exercises
 
-1. Add a color.
-2. Complete circle.
-3. Complete rectangle.
-4. Complete triangle.
-5. Add width parameter.
-'''
+Fecha: 9 / mayo / 2022
+"""
 
 from turtle import *
-from turtle import circle as cr
+
 from freegames import vector
-import math
 
 
 def line(start, end):
-    '''Draw line from start to end.'''
+    """Draw line from start to end."""
     up()
     goto(start.x, start.y)
     down()
@@ -24,7 +22,7 @@ def line(start, end):
 
 
 def square(start, end):
-    '''Draw square from start to end.'''
+    """Draw square from start to end."""
     up()
     goto(start.x, start.y)
     down()
@@ -38,52 +36,32 @@ def square(start, end):
 
 
 def circle(start, end):
-    '''Draw circle from start to end.'''
-    up()
-    goto(start.x, start.y)
-    down()
-    begin_fill()
-    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2)
-    cr(dis_between_points) # circle func from turtle
-    end_fill()
-
-
-def rectangle(start, end):
-    '''Draw rectangle from start to end.'''
-    up()
-    goto(start.x, start.y)
-    down()
-    begin_fill()
-    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2) # calculating distance between points
-    if (end.x+start.x) >=(end.y+start.y):
-        forward(dis_between_points)
-        left(90)
-        forward(dis_between_points/2)
-        left(90)
-        forward(dis_between_points)
-        left(90)
-        forward(dis_between_points/2)
-        left(90)
-        end_fill()
-    else:
-        forward(dis_between_points/2)
-        left(90)
-        forward(dis_between_points)
-        left(90)
-        forward(dis_between_points/2)
-        left(90)
-        forward(dis_between_points)
-        left(90)
-        end_fill()       
-
-
-def triangle(start, end):
-    '''Draw triangle from start to end.'''
+    """Draw circle from start to end."""
     pass  # TODO
 
 
+def rectangle(start, end):
+    """Draw rectangle from start to end."""
+    pass  # TODO
+
+
+def triangle(start, end):
+    """Draw triangle from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    "Le decimos que lo repita 3 veces"
+    for count in range(3):
+        forward(end.x - start.x)
+        "Son los angulos que nos da cada espacio"
+        left(120)
+
+    end_fill()
+
+
 def tap(x, y):
-    '''Store starting point or draw shape.'''
+    """Store starting point or draw shape."""
     start = state['start']
 
     if start is None:
@@ -96,7 +74,7 @@ def tap(x, y):
 
 
 def store(key, value):
-    '''Store value in state at key'''
+    """Store value in state at key."""
     state[key] = value
 
 
@@ -110,6 +88,8 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+"Se agrego el color amarillo"
+onkey(lambda: color('Yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
