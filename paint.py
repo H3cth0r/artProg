@@ -44,13 +44,37 @@ def circle(start, end):
     down()
     begin_fill()
     dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2)
-    cr(dis_between_points)
+    cr(dis_between_points) # circle func from turtle
     end_fill()
 
 
 def rectangle(start, end):
     '''Draw rectangle from start to end.'''
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2) # calculating distance between points
+    if (end.x+start.x) >=(end.y+start.y):
+        forward(dis_between_points)
+        left(90)
+        forward(dis_between_points/2)
+        left(90)
+        forward(dis_between_points)
+        left(90)
+        forward(dis_between_points/2)
+        left(90)
+        end_fill()
+    else:
+        forward(dis_between_points/2)
+        left(90)
+        forward(dis_between_points)
+        left(90)
+        forward(dis_between_points/2)
+        left(90)
+        forward(dis_between_points)
+        left(90)
+        end_fill()       
 
 
 def triangle(start, end):
