@@ -36,8 +36,63 @@ def square(start, end):
 
 
 def circle(start, end):
+
     """Draw circle from start to end."""
     pass  # TODO
+
+    '''Draw circle from start to end.'''
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2)
+    cr(dis_between_points) # circle func from turtle
+    end_fill()
+
+
+def rectangle(start, end):
+    '''Draw rectangle from start to end.'''
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2) # calculating distance between points
+    if (end.x+start.x) >=(end.y+start.y):
+        forward(dis_between_points)
+        left(90)
+        forward(dis_between_points/2)
+        left(90)
+        forward(dis_between_points)
+        left(90)
+        forward(dis_between_points/2)
+        left(90)
+        end_fill()
+    else:
+        forward(dis_between_points/2)
+        left(90)
+        forward(dis_between_points)
+        left(90)
+        forward(dis_between_points/2)
+        left(90)
+        forward(dis_between_points)
+        left(90)
+        end_fill()       
+
+
+def triangle(start, end):
+    '''Draw triangle from start to end.'''
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    "Le decimos que lo repita 3 veces"
+    for count in range(3):
+        forward(end.x - start.x)
+        "Son los angulos que nos da cada espacio"
+        left(120)
+
+    end_fill()
+
 
 
 def rectangle(start, end):
