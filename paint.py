@@ -12,6 +12,7 @@ Exercises
 from turtle import *
 from turtle import circle as cr
 from freegames import vector
+import math
 
 
 def line(start, end):
@@ -42,7 +43,8 @@ def circle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    cr(end.x-start.x)
+    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2)
+    cr(dis_between_points)
     end_fill()
 
 
