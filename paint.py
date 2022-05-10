@@ -79,7 +79,17 @@ def rectangle(start, end):
 
 def triangle(start, end):
     '''Draw triangle from start to end.'''
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    "Le decimos que lo repita 3 veces"
+    for count in range(3):
+        forward(end.x - start.x)
+        "Son los angulos que nos da cada espacio"
+        left(120)
+
+    end_fill()
 
 
 def tap(x, y):
@@ -110,6 +120,8 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+"Se agrego el color amarillo"
+onkey(lambda: color('Yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
