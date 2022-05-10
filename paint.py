@@ -9,9 +9,9 @@ Fecha: 9 / mayo / 2022
 """
 
 from turtle import *
-
+from turtle import circle as cr
 from freegames import vector
-
+import math
 
 def line(start, end):
     """Draw line from start to end."""
@@ -36,10 +36,6 @@ def square(start, end):
 
 
 def circle(start, end):
-
-    """Draw circle from start to end."""
-    pass  # TODO
-
     '''Draw circle from start to end.'''
     up()
     goto(start.x, start.y)
@@ -95,9 +91,6 @@ def triangle(start, end):
 
 
 
-def rectangle(start, end):
-    """Draw rectangle from start to end."""
-    pass  # TODO
 
 
 def triangle(start, end):
@@ -144,7 +137,7 @@ onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 "Se agrego el color amarillo"
-onkey(lambda: color('Yellow'), 'Y')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
