@@ -11,6 +11,7 @@ Exercises
 
 from random import choice
 from turtle import *
+import math
 
 from freegames import floor, vector
 
@@ -131,24 +132,71 @@ def move():
     dot(20, 'yellow')
 
     for point, course in ghosts:
+
         if valid(point + course):
-             point.move(course*2)
-            
+            # in case there is no other option
+            point.move(course*2)
         else:
             options = [
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
+                    vector(5, 0),
+                    vector(-5, 0),
+                    vector(0, 5),
+                    vector(0, -5),
             ]
             plan = choice(options)
+
+            min_num = 1000
+            min_num_index = 10
+            for i in range(len(options)):
+                if valid(point + options[i]):
+                    dist = math.sqrt((  (point.x + options[i].x) - pacman.x)**2 +(  (point.y + options[i].y) - pacman.y)**2)
+                    if dist < min_num:
+                        min_num = dist
+                        min_num_index = i
+            plan = options[min_num_index]
+            #if (point.x - pacman.x)**2 > (point.y - pacman.y)**2:
+            #    if point.x < pacman.x:
+            #        if valid(point + options[0]):
+            #            print("->")
+            #            plan = options[0]
+            #        else:
+            #            print("<-")
+            #            plan = options[1]
+            #    elif point.x > pacman.x:
+            #        if valid(point + options[1]):
+            #            print("<-")
+            #            plan = options[1]
+            #        else:
+            #            print("->")
+            #            plan = options[0]
+            #    else:
+            #        pass
+            #elif (point.x - pacman.x)**2 < (point.y - pacman.y)**2:
+            #    if point.y < pacman.y:
+            #        if valid(point + options[2]):
+            #            print("^")
+            #            plan = options[2]
+            #        else:
+            #            print("v")
+            #            plan = options[3]
+            #    elif point.y > pacman.y:
+            #        if valid(point + options[3]):
+            #            print("v")
+            #            plan = options[3]
+            #        else:
+            #            print("^")
+            #            plan = options[2]
+            #    else:
+            #        pass
             course.x = plan.x
             course.y = plan.y
 
+       
         up()
         goto(point.x + 10, point.y + 10)
         dot(20, 'red')
-
+        
+         
     update()
 
     for point, course in ghosts:
