@@ -88,9 +88,10 @@ def draw():
     writer.goto(190, 185)
     writer.color('green')
 
-    if forma['score'] == 2:
-        writer.write("Terminaste")
+    if forma['score'] == 32:
         writer.goto(0, 0)
+        writer.write("Terminaste")
+        
     
 
     update()
