@@ -1,3 +1,10 @@
+"""Game: Snake
+ programmer 1: Luis Angel Gonzalez Tapia
+ programmer 2: Héctor Miranda García
+ Date: 11/05/2022
+"""
+
+
 """Snake, classic arcade game.
 
 Exercises
@@ -13,13 +20,13 @@ from turtle import *
 
 from freegames import square, vector
 
-
+""" Created this list of colors for the snake and food"""
 Colores = ["green", "black", "blue", "yellow", "pink"]
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-ColorFood=choice(Colores)
-ColorSnake=choice(Colores)
+ColorFood=choice(Colores) # random choice color from list for food
+ColorSnake=choice(Colores) # random choice color from list for snake
 
 def change(x, y):
     """Change snake direction."""
@@ -48,14 +55,23 @@ def move():
 
     if head == food:
         print('Snake:', len(snake))
+        
+        """Starting position of food"""
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
     else:   
         snake.pop(0)
         if inside(food):
+            """making foot move on random range
+            from -1 to 1
+            """
             food.x += randrange(-1, 1) * 5
             food.y += randrange(-1, 1) * 5
         elif not inside(food):
+            """In case the food moves outside of
+            the map, the food will be place in
+            another ramdom place of the map.
+            """
             food.x = randrange(-15, 15) * 10
             food.y = randrange(-15, 15) * 10
 
@@ -63,9 +79,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, ColorSnake)
+        square(body.x, body.y, 9, ColorSnake) # ramdom choice color snake head
 
-    square(food.x, food.y, 9, ColorFood)
+    square(food.x, food.y, 9, ColorFood) # random choice color food
     update()
     ontimer(move, 100)
 
