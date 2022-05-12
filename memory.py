@@ -80,9 +80,17 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        goto(x + 2, y + 7)
         color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        if len(str(tiles[mark])) == 1:
+            num_tile = "  " + str(tiles[mark])
+            write(num_tile,font=('Arial', 20, 'normal'))
+        elif tiles[mark] >= 20:
+            num_tile = " " + str(tiles[mark])
+            write(num_tile, align="left",font=('Arial', 20, 'normal'))
+        else:
+            num_tile = " " + str(tiles[mark])
+            write(num_tile,font=('Arial', 20, 'normal'))
     #Se dibuja el score 
     writer.write(forma['score'])
     writer.goto(190, 185)
