@@ -15,9 +15,13 @@ from turtle import *
 from freegames import path
 
 car = path('car.gif')
-tiles = list(range(2)) * 2
+tiles = list(range(32)) * 2
 state = {'mark': None}
-hide = [True] * 4
+hide = [True] * 64
+# Atributos para el puntaje
+writer = Turtle(visible=False)
+forma = {'score': 0}
+
 
 
 def square(x, y):
@@ -29,7 +33,7 @@ def square(x, y):
     begin_fill()
     for count in range(4):
         forward(50)
-        left(50)
+        left(90)
     end_fill()
 
 
@@ -54,6 +58,9 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
+        #Se suma el puntaje cada vez que estar correcto
+        forma['score'] += 1
+         
 
 
 def draw():
@@ -63,7 +70,7 @@ def draw():
     shape(car)
     stamp()
 
-    for count in range(4):
+    for count in range(64):
         if hide[count]:
             x, y = xy(count)
             square(x, y)
@@ -76,6 +83,15 @@ def draw():
         goto(x + 2, y)
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
+    #Se dibuja el score 
+    writer.write(forma['score'])
+    writer.goto(190, 185)
+    writer.color('green')
+
+    if forma['score'] == 2:
+        writer.write("Terminaste")
+        writer.goto(0, 0)
+    
 
     update()
     ontimer(draw, 100)
