@@ -1,4 +1,4 @@
-"""Juego: Paint
+"""Game: Paint
 Programmer 1: Luis Angel Gonzalez Tapia
 Programmer 2: Héctor Miranda García
 
