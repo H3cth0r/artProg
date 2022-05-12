@@ -78,6 +78,10 @@ def draw():
     mark = state['mark']
 
     if mark is not None and hide[mark]:
+        """Here we are setting spaces for each case
+           of number length. We set some properties
+           for centering each number in each tile.
+        """
         x, y = xy(mark)
         up()
         goto(x + 2, y + 7)
