@@ -1,9 +1,6 @@
-"""
-Juego: Paint
-Programador 1: Luis JosÃ© GonzÃ¡lez
-Programador 2: ??????
-Programador 3: Luis Angel Gonzalez
-
+"""Juego: Paint
+Programmer 1: Luis Angel Gonzalez Tapia
+Programmer 2: Héctor Miranda García
 
 Fecha: 9 / mayo / 2022
 """
@@ -29,7 +26,7 @@ def square(start, end):
     down()
     begin_fill()
 
-    for count in range(4):
+    for count in range(4):  # will be looped four times
         forward(end.x - start.x)
         left(90)
 
@@ -42,7 +39,8 @@ def circle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2)
+    dis_between_points = math.sqrt((end.x-start.x)**2
+                                    + (end.y-start.y)**2) # calculating raius
     cr(dis_between_points) # circle func from turtle
     end_fill()
 
@@ -53,8 +51,9 @@ def rectangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    dis_between_points = math.sqrt((end.x-start.x)**2 + (end.y-start.y)**2) # calculating distance between points
-    if (end.x+start.x) >=(end.y+start.y):
+    dis_between_points = math.sqrt((end.x-start.x)**2
+                                    + (end.y-start.y)**2) # calculating distance between pointh
+    if (end.x+start.x) >= (end.y+start.y):  # in case base longer
         forward(dis_between_points)
         left(90)
         forward(dis_between_points/2)
@@ -64,7 +63,7 @@ def rectangle(start, end):
         forward(dis_between_points/2)
         left(90)
         end_fill()
-    else:
+    else:                                   # in case hight is longer
         forward(dis_between_points/2)
         left(90)
         forward(dis_between_points)
@@ -77,16 +76,14 @@ def rectangle(start, end):
 
 
 def triangle(start, end):
-    '''Draw triangle from start to end.'''
+    """Draw triangle from start to end."""
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
-    "Le decimos que lo repita 3 veces"
-    for count in range(3):
+    for count in range(3): # will be repeated three times
         forward(end.x - start.x)
-        "Son los angulos que nos da cada espacio"
-        left(120)
+        left(120)   # This is the angle
 
     end_fill()
 
@@ -100,11 +97,9 @@ def triangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    "Le decimos que lo repita 3 veces"
-    for count in range(3):
+    for count in range(3):  # must be repeated three times
         forward(end.x - start.x)
-        "Son los angulos que nos da cada espacio"
-        left(120)
+        left(120)   # must turn on 120 angles
 
     end_fill()
 
