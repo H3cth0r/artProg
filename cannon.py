@@ -25,8 +25,8 @@ def tap(x, y):
         ball.y = -199
         # Cambie la frecuencia a la que se estaba dividiendo la velocidad de la pelota para que fuera 
         # mas rapida
-        speed.x = (x + 200) /7
-        speed.y = (y + 200) /7
+        speed.x = (x + 200) /15
+        speed.y = (y + 200) /15
 
 
 def inside(xy):
@@ -58,7 +58,7 @@ def move():
 
     for target in targets:
         #Se cambio la velocidad de las pelotas azules
-        target.x -= 5.5
+        target.x -= 2.5
 
     if inside(ball):
         speed.y -= 0.35
