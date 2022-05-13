@@ -72,10 +72,56 @@ position on the x-axis and give it a new random point on the y-axis.
 ![alt text](https://github.com/H3cth0r/artProg/blob/main/resources/cannon_rearange.png?raw=true)
 
 
+## Pacman
+
+This game is a version or copy of the popular retro video game called 
+Pacman, which is a video game with a map with different walls and 
+paths, where on each path there are cookies or points that the user 
+must consume in its entirety to win the game; Inside the map there are 
+other characters, which are ghosts that move around the map looking 
+for the user to eliminate him, the user must consume the points, 
+while doing everything possible so that the ghosts do not destroy him.
+In the case of this game, the activity requirements indicated that we 
+should change the board, increase the speed of the ghosts and make 
+the ghosts more intelligent, which means that the ghosts have to be 
+able to follow and search for the user. on the board in a more 
+optimal way, since previously the ghosts moved randomly on the map, 
+being the case that in case the user is captured, it would be more 
+than anything a coincidence. Next, the steps and the work carried out 
+with respect to this game will be explained.
+
+Firstly, for the case of making the ghosts intelligent and move in a 
+way that makes sense and is not random. For this, the idea of using 
+the formula for calculating the distance between the pac man character 
+and the individual ghost was proposed, this should be done within a 
+loop that tests each of the movements within the options variable, 
+this to evaluate the distance that there would be in case it moved in 
+a certain direction and in case the movement is possible, this to 
+evaluate which is the path that brings the ghost closer to the user, 
+in this way the ghosts will do everything possible to get closer to 
+the user, until reaching it. The previous explanation and steps 
+followed for this approach can be seen in the following piece of code.
+
+*img_for_if_else_intelligent*
+
+In the case of making changes to the board, this will be done easily; 
+For this, all you have to do is edit the list called tiles, which is 
+presented in the form of a square, where each number 1 is an empty 
+space or a path, and a 0 is a wall, in this way, of changes will be 
+made automatically and easily.
+
+*img_map_list*
+
+Subsequently, in the case of the approach of making the ghosts move 
+faster, what was done was to multiply the course followed by the 
+ghost by two, in this way it will be possible to observe that the 
+speed at which the ghosts now move will be faster.
+
+
+*img_spee_increase*
+
 ## Memory
 
-
-## Pacman
 
 
 ## Paint
