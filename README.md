@@ -17,7 +17,7 @@ Héctor Miranda García
 
 ## Games 
 As said, we worked in some freegames module small-games. For this
-subject, we worked on five games, the following ones with was was done:
+subject, we worked on five games, the following ones, with was was done:
 - **cannon.py** : the objetiveof this game is to shoot some kind of 
 bullet
 to some target, whish are blue circles. For firing the 
@@ -54,4 +54,19 @@ game named "snake". On this case we had to add the functionality for
 making the food move as well on the map; we had also to make the 
 head of the snake and the food to change each time the game is opened
 again.
+
+
+## Cannon
+
+
+## memory
+
+
+## pacman
+
+
+## paint
+
+
+## snake
 </div>
