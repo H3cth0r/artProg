@@ -1,14 +1,24 @@
-"""Game: Paint
-Programmer 1: Luis Angel Gonzalez Tapia
-Programmer 2: Héctor Miranda García
-
-Fecha: 9 / mayo / 2022
+"""Game:        Paint - Freegames
+Programmer 1:   Luis Angel Gonzalez Tapia
+Programmer 2:   Héctor Miranda García
+Date:           9 / may / 2022
+Description:    Program that displays a window where the user is
+                able to use some commands with his keyboard for
+                actioning different drawing methods and colors.
+                The basic functionality was made by the Freegames
+                authors, but we added functionality to missing
+                functions, the following: the yellow color was
+                added; draw circle function was completed; the
+                function for drawing a rectangle was completed
+                and function for drawing a triangle was also
+                completed.
 """
 
 from turtle import *
-from turtle import circle as cr
+from turtle import circle as cr # Importing Circle method
 from freegames import vector
-import math
+
+import math  # Lib imported for sqrt for distance between points
 
 
 def line(start, end):
@@ -25,8 +35,9 @@ def square(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-
-    for count in range(4):  # will be looped four times
+    
+    # loop for each corner of the square
+    for count in range(4):
         forward(end.x - start.x)
         left(90)
 
@@ -34,26 +45,36 @@ def square(start, end):
 
 
 def circle(start, end):
-    '''Draw circle from start to end.'''
+    """Draw circle from start to end.
+       This function uses the circle method from the
+       turtle library. We create the distance var
+       that calculates the distance between two points
+       for defining radius; uses the start to end 
+       proints.
+    """
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
+
     dis_between_points = math.sqrt((end.x-start.x)**2
-                                    + (end.y-start.y)**2) # calculating raius
-    cr(dis_between_points) # circle func from turtle
+                                    + (end.y-start.y)**2) # Calculating radius
+    cr(dis_between_points) # Circle func from turtle
     end_fill()
 
 
 def rectangle(start, end):
-    '''Draw rectangle from start to end.'''
+    """Draw rectangle from start to end."""
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
     dis_between_points = math.sqrt((end.x-start.x)**2
-                                    + (end.y-start.y)**2) # calculating distance between pointh
-    if (end.x+start.x) >= (end.y+start.y):  # in case base longer
+                                    + (end.y-start.y)**2) # Calculating distance between pointh
+
+    # Statement in case distance between points 
+    # In x axis are larger (base).
+    if (end.x+start.x) >= (end.y+start.y):
         forward(dis_between_points)
         left(90)
         forward(dis_between_points/2)
@@ -63,7 +84,9 @@ def rectangle(start, end):
         forward(dis_between_points/2)
         left(90)
         end_fill()
-    else:                                   # in case hight is longer
+
+    # Altitud larger than base statement
+    else:
         forward(dis_between_points/2)
         left(90)
         forward(dis_between_points)
@@ -81,25 +104,11 @@ def triangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    for count in range(3): # will be repeated three times
+
+    # Loop that will be repeated for each corner.
+    for count in range(3):
         forward(end.x - start.x)
-        left(120)   # This is the angle
-
-    end_fill()
-
-
-
-
-
-def triangle(start, end):
-    """Draw triangle from start to end."""
-    up()
-    goto(start.x, start.y)
-    down()
-    begin_fill()
-    for count in range(3):  # must be repeated three times
-        forward(end.x - start.x)
-        left(120)   # must turn on 120 angles
+        left(120)
 
     end_fill()
 
@@ -126,14 +135,18 @@ state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+
+# Definition of colors and correspoding activation keys
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-"Se agrego el color amarillo"
-onkey(lambda: color('yellow'), 'Y')
+onkey(lambda: color('yellow'), 'Y')         # Definition of yellow color
+
+
+# Definition of figures and corresponding activation keys
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
