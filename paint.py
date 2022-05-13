@@ -57,8 +57,8 @@ def circle(start, end):
     down()
     begin_fill()
 
-    dis_between_points = math.sqrt((end.x-start.x)**2
-                                    + (end.y-start.y)**2) # Calculating radius
+    dis_between_points = math.sqrt((end.x - start.x)**2
+                                    + (end.y - start.y)**2) # Calculating radius
     cr(dis_between_points) # Circle func from turtle
     end_fill()
 
@@ -69,29 +69,29 @@ def rectangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    dis_between_points = math.sqrt((end.x-start.x)**2
-                                    + (end.y-start.y)**2) # Calculating distance between pointh
+    dis_between_points = math.sqrt((end.x - start.x)**2
+                                    + (end.y - start.y)**2) # Calculating distance between pointh
 
     # Statement in case distance between points 
     # In x axis are larger (base).
-    if (end.x+start.x) >= (end.y+start.y):
+    if (end.x + start.x) >= (end.y + start.y):
         forward(dis_between_points)
         left(90)
-        forward(dis_between_points/2)
+        forward(dis_between_points / 2)
         left(90)
         forward(dis_between_points)
         left(90)
-        forward(dis_between_points/2)
+        forward(dis_between_points / 2)
         left(90)
         end_fill()
 
     # Altitud larger than base statement
     else:
-        forward(dis_between_points/2)
+        forward(dis_between_points / 2)
         left(90)
         forward(dis_between_points)
         left(90)
-        forward(dis_between_points/2)
+        forward(dis_between_points / 2)
         left(90)
         forward(dis_between_points)
         left(90)
@@ -131,7 +131,8 @@ def store(key, value):
     state[key] = value
 
 
-state = {'start': None, 'shape': line}
+state = {'start' : None,
+         'shape' : line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
@@ -143,8 +144,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-onkey(lambda: color('yellow'), 'Y')         # Definition of yellow color
-
+onkey(lambda: color('yellow'), 'Y')   # Definition of yellow color
 
 # Definition of figures and corresponding activation keys
 onkey(lambda: store('shape', line), 'l')

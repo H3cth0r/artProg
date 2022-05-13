@@ -26,8 +26,8 @@ Colores = ["green", "black", "blue", "yellow", "pink"]
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-ColorFood=choice(Colores)  # Random choice color from list for food
-ColorSnake=choice(Colores) # Random choice color from list for snake
+ColorFood = choice(Colores)  # Random choice color from list for food
+ColorSnake = choice(Colores) # Random choice color from list for snake
 
 def change(x, y):
     """Change snake direction."""
@@ -37,7 +37,7 @@ def change(x, y):
 
 def inside(head):
     """Return True if head inside boundaries."""
-    return -200 < head.x < 190 and -200 < head.y < 190
+    return (-200 < head.x < 190 and -200 < head.y < 190)
 
 
 def move():
@@ -78,9 +78,15 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, ColorSnake) # ramdom choice color snake head
+        square(body.x,
+               body.y,
+               9, 
+               ColorSnake) # ramdom choice color snake head
 
-    square(food.x, food.y, 9, ColorFood) # random choice color food
+    square(food.x,
+           food.y,
+           9, 
+           ColorFood) # random choice color food
     update()
     ontimer(move, 100)
 

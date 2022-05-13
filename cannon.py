@@ -33,8 +33,8 @@ def tap(x, y):
         
         # Changed frequency in which velocity was divided
         # For making the movement faster.
-        speed.x = (x + 200) /15
-        speed.y = (y + 200) /15
+        speed.x = (x + 200) / 15
+        speed.y = (y + 200) / 15
 
 
 def inside(xy):
@@ -84,11 +84,8 @@ def move():
     # We rearange the target, to make the inifinite game
     for target in targets:
         if not inside(target):
-            target.x=200
-            target.y=randrange(-150,150)
-            
-
-
+            target.x = 200
+            target.y = randrange(-150,150)
             
 
 
