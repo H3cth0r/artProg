@@ -34,6 +34,7 @@ car = path('car.gif')
 tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
+
 # Atributos para el puntaje
 writer = Turtle(visible=False)
 forma = {'score': 0}
@@ -74,7 +75,8 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
-        #Se suma el puntaje cada vez que estar correcto
+
+        # Se suma el puntaje cada vez que estar correcto
         forma['score'] += 1
          
 
@@ -104,13 +106,19 @@ def draw():
         color('black')
         if len(str(tiles[mark])) == 1:
             num_tile = "  " + str(tiles[mark])
-            write(num_tile,font=('Arial', 20, 'normal'))
+            write(num_tile,
+                  font=('Arial', 20, 'normal'))
         elif tiles[mark] >= 20:
             num_tile = " " + str(tiles[mark])
-            write(num_tile, align="left",font=('Arial', 20, 'normal'))
+            write(num_tile,
+                  align="left",
+                  font=('Arial', 20,
+                  'normal'))
         else:
             num_tile = " " + str(tiles[mark])
-            write(num_tile,font=('Arial', 20, 'normal'))
+            write(num_tile,font=('Arial', 
+                                  20,
+                                  'normal'))
     #Se dibuja el score 
     writer.write(forma['score'])
     writer.goto(190, 185)

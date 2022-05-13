@@ -6,7 +6,9 @@ Description:    This is a replica of the retro and popular game called
                 pacman. For this game the user must eat as much cookies
                 or points distributed all along the game map or maze;
                 there are some enemies on the map, which are ghost,that
-                on this particular version, the gohst are the red circle                s; so the user must eat the points while trying to not
+                on this particular version, the gohst are the red 
+                circles; so the user must eat the points while trying 
+                to not
                 get catched by the ghosts. The game controls for this
                 game are the arrow keys. For this game we were asked to
                 do tree things, that was to make the ghosts smarter;
@@ -106,7 +108,7 @@ def world():
         tile = tiles[index]
 
         if tile > 0:
-            x = (index % 20) * 20 - 200
+            x = (index%20) * 20 - 200
             y = 180 - (index // 20) * 20
             square(x, y)
 
@@ -131,7 +133,7 @@ def move():
     if tiles[index] == 1:
         tiles[index] = 2
         state['score'] += 1
-        x = (index % 20) * 20 - 200
+        x = (index%20) * 20 - 200
         y = 180 - (index // 20) * 20
         square(x, y)
 
@@ -163,7 +165,10 @@ def move():
                 if valid(point + options[i]):
 
                     # Calculates ditance in case next posible movement.
-                    dist = math.sqrt(((point.x + options[i].x) - pacman.x)**2 + ((point.y + options[i].y) - pacman.y)**2)
+                    dist = math.sqrt(((point.x+options[i].x) 
+                           - pacman.x)**2 
+                           + ((point.y+options[i].y) 
+                           - pacman.y)**2)
 
                     # Checks wether distance is shorte than another
                     # previoud route.
