@@ -108,8 +108,7 @@ the present function and Turtle's. Later the figure will be filled.
 Consequently, the results obtained with respect to this 
 function can be seen as follows when running the program.
 
-*Imagen II. Aplicación de función circle.*
-![alt text](http://url/to/img.png)
+![application circle function](https://github.com/H3cth0r/artProg/blob/main/resources/paint_circle_app.png?raw=true)
 
 
 In the case of the function to display a rectangle, first, the same 
@@ -134,8 +133,7 @@ Consequently, when running the program and applying this functionality
 , the following can be observed, in case the height or the base of 
 the rectangular is longer or not.
 
-*Imagen IV. Aplicación de función rectangle.*
-![alt text](http://url/to/img.png)
+![application rectangle function](https://github.com/H3cth0r/artProg/blob/main/resources/paint_rectangle_app.png?raw=true)
 
 Finally, in the case of the functionality to be completed called 
 triangle, in summary, a for cycle is created that will be repeated 
@@ -149,8 +147,7 @@ generating a triangle. equilateral:
 Once the program is run and said functionality is used, the 
 following result is obtained to print a triangle:
 
-*Imagen VI. Aplicación de función triangle*
-![alt text](http://url/to/img.png)
+![application triangle function](https://github.com/H3cth0r/artProg/blob/main/resources/paint_triangle_app.png?raw=true)
 
 Finally, the yellow color was added to the color palette that can be 
 used to color or add color to the figures that are created on the 
