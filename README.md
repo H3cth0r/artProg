@@ -29,7 +29,7 @@ Luis Angel Gonzales Tapia <br>
 Héctor Miranda García
 
 ## Games 
-As said, we worked in some freegames module small-games. For this
+As said, we worked in some freegames module mini-games. For this
 subject, we worked on five games, the following ones, with what 
 was done.
 
@@ -55,15 +55,13 @@ the following was applied to the code shown in image XI, where,
 as the comment indicates, the frequency in which the speed was 
 divided was changed, which allows increasing the velocity.
 
-*img_tab_function*
+![tap function](https://github.com/H3cth0r/artProg/blob/main/resources/cannon_tap_func.png?raw=true)
 
 Likewise, for the speed increase, the speed value of the blue 
 targets has been changed, which causes the targets to increase 
 their speed, as shown in the following image.
 
-
-
-*move_function_img*
+![move function](https://github.com/H3cth0r/artProg/blob/main/resources/cannon_move_funct.png?raw=true)
 
 
 As far as making the game infinite is concerned, in the part of this 
@@ -71,8 +69,7 @@ for where there was only a return that made the game stop, these
 two lines were added to re-accommodate the targets in their 
 position on the x-axis and give it a new random point on the y-axis.
 
-*rearange_img*
-
+![alt text](https://github.com/H3cth0r/artProg/blob/main/resources/cannon_rearange.png?raw=true)
 
 
 ## Memory
@@ -106,12 +103,14 @@ which is the abbreviation for the circle function that is part of the
 Turtle library, but its name was changed to avoid confusion between 
 the present function and Turtle's. Later the figure will be filled.
 
-*img_function_circle*
+![function circle](https://github.com/H3cth0r/artProg/blob/main/resources/paint_circle.png?raw=true)
 
 Consequently, the results obtained with respect to this 
 function can be seen as follows when running the program.
 
 *Imagen II. Aplicación de función circle.*
+![alt text](http://url/to/img.png)
+
 
 In the case of the function to display a rectangle, first, the same 
 initial procedure that was commented above was carried out, where the 
@@ -129,13 +128,14 @@ measures this distance between the points and that the shortest side
 is half the distance between the points. Below is the code for 
 that function.
 
-*img_function_rectangle*
+![rectangle function](https://github.com/H3cth0r/artProg/blob/main/resources/paint_rectangle.png?raw=true)
 
 Consequently, when running the program and applying this functionality
 , the following can be observed, in case the height or the base of 
 the rectangular is longer or not.
 
 *Imagen IV. Aplicación de función rectangle.*
+![alt text](http://url/to/img.png)
 
 Finally, in the case of the functionality to be completed called 
 triangle, in summary, a for cycle is created that will be repeated 
@@ -144,13 +144,13 @@ of the points on the x axis, will be rotated 120 degrees,
 generating a triangle. equilateral:
 
 
-*img__function_triangle*
+![triangle function](https://github.com/H3cth0r/artProg/blob/main/resources/paint_triangle.png?raw=true)
 
 Once the program is run and said functionality is used, the 
 following result is obtained to print a triangle:
 
 *Imagen VI. Aplicación de función triangle*
-
+![alt text](http://url/to/img.png)
 
 Finally, the yellow color was added to the color palette that can be 
 used to color or add color to the figures that are created on the 
@@ -158,7 +158,7 @@ screen. To add this color, the same procedure was followed as for
 the other colors that were already available, as can be seen in the 
 following image:
 
-*img_yellow_color_definition*
+![new color](https://github.com/H3cth0r/artProg/blob/main/resources/paint_yellow.png?raw=true)
 
 ## Snake
 
@@ -187,7 +187,7 @@ can be seen in this if, it is confirmed that the food is inside
 the map, otherwise, the food will be relocated inside the map 
 randomly, as if the snake had captured it.
 
-*if_code_block_img*
+![if code block](https://github.com/H3cth0r/artProg/blob/main/resources/snake_if_code_block.png?raw=true)
 
 For the case of changing the color of the head and food randomly when 
 starting a new game, the following code block was added, as can be 
@@ -196,14 +196,13 @@ later, The ColorFood and ColorSnake variables were created, they
 randomly select some color from the list, as shown in the 
 following image.
 
-*color selection img*
+![random color selection](https://github.com/H3cth0r/artProg/blob/main/resources/snake_color_selection.png?raw=true)
 
 Later, within the move function of the video game, these variables 
 are used within the square function that allows the creation of a 
 frame, either for the case of the head or the food, as shown in 
 the following image:
 
-*applicaction o color img*
-
+![color application](https://github.com/H3cth0r/artProg/blob/main/resources/snake_color_selection.png?raw=true)
 
 </div>
