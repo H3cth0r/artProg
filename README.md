@@ -248,4 +248,52 @@ the following image:
 
 ![color application](https://github.com/H3cth0r/artProg/blob/main/resources/snake_color_selection.png?raw=true)
 
+
+## Documentation and Standard PEP-8
+Regarding the documentation, comments were added to all the points 
+that were made by the team within the code, this to be able to 
+identify the operation and locate the changes in a simpler way; 
+It should be noted that the recommendations of the PEP-8 standard were 
+followed in the case of comments. Likewise, in each code, a format was 
+added at the top where the general information of the program is 
+reflected, such as the name of the script, the programmers who 
+participated in the code, the date in which it was worked on and a 
+brief description of this code. An example of this format 
+is shown below.
+
+*img_info_format*
+
+In the case of the other aspects of the PEP-8 standard, the codes 
+were reviewed line by line while the standard was being revised, 
+to ensure that the same standard was being taken care of and 
+maintained. In the same way, as expressed and recommended in the same 
+standard documentation, it is indicated that it is recommended that 
+all the code be written in English, along with comments, this to 
+ensure that it can be used, reviewed and reused by anyone from any 
+country, therefore this rule was followed by 90%; Similarly, the 
+README will show this same information, but in English.
+
+
+## Conclusion
+This week has served to refresh knowledge of python and programming 
+in it, as well as in the same way, we had the opportunity to work 
+and practice a series of Git commands from the terminal, this 
+allows us to have greater knowledge about the great potential of 
+terminal and that sometimes it is more optimal and easier to make 
+arrangements from the terminal. Being able to put all this knowledge 
+into practice working with these video games has allowed the work to 
+be much more interactive and interesting. In the same way, being able 
+to interact with these codes of these retro games, it is very 
+interesting to be able to realize how a high-level language, such as 
+python, summarizes and can carry out what was written in code in the 
+past, in a very brief, easy to understand and clean way. In the same 
+way, many times we ignore the standards of programming languages, but 
+it really is an excellent practice to adhere as much as possible to 
+these standards, to improve the quality of our codes and allow us to 
+grow as professionals, where in the near future when working in the 
+industry, we are going to be required to maintain these standards; 
+so it is important to practice these standards at all times.
+
+
+
 </div>
