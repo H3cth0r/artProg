@@ -1,12 +1,28 @@
-"""Memory, puzzle game of number pairs.
-
-Exercises:
-
-1. Count and print how many taps occur.
-2. Decrease the number of tiles to a 4x4 grid.
-3. Detect when all tiles are revealed.
-4. Center single-digit tile.
-5. Use letters instead of tiles.
+"""Game:        Memory - Freegames
+Programmer1:    Luis Angel Gonzalez Tapia
+Programmar2:    Héctor Miranda García
+Date:           9 / may / 2022
+Description:    This is a digital version of the popular board game
+                called 'Memory'. For this game the user is forced
+                and challenged to memorize the location of the values
+                under the tiles to find the pairs and encrease his
+                score. The board consists of 64 tiles and 32 pairs.
+                On this game, the values under the tiles are integer
+                numbers, raging from 1 to 32. The user must click under
+                the desired tile to uncover its value. Each time the 
+                user finds a pair, the tile is "removed" from the board
+                and a part of the backgroud on the board gets visible, 
+                this way at the end of the game, the user will be able
+                to apreciate an image of car as the background of the
+                map. For this game, we were required  to do is to 
+                count and display the number or taps; detect and display
+                a message in case the use has finished; to center the
+                digit into the square and to create a copy of this 
+                changes, but adding another way of displaying some kind
+                of values under the tile. We decided that the second 
+                version was going to consist of colors, instead of 
+                numbers. You can find this other version here, named
+                'memory2.0.py.'
 """
 
 from random import *

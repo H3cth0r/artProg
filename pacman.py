@@ -1,17 +1,23 @@
-"""Pacman, classic arcade game.
-
-Exercises
-
-1. Change the board.
-2. Change the number of ghosts.
-3. Change where pacman starts.
-4. Make the ghosts faster/slower.
-5. Make the ghosts smarter.
+"""Game:        Pacman - Freegames
+Programmer1:    Luis Angel Gonzalez Tapia
+Programmar2:    Héctor Miranda García
+Date:           9 / may / 2022
+Description:    This is a replica of the retro and popular game called
+                pacman. For this game the user must eat as much cookies
+                or points distributed all along the game map or maze;
+                there are some enemies on the map, which are ghost,that
+                on this particular version, the gohst are the red circle                s; so the user must eat the points while trying to not
+                get catched by the ghosts. The game controls for this
+                game are the arrow keys. For this game we were asked to
+                do tree things, that was to make the ghosts smarter;
+                make some change to the board and to make the ghosts to
+                move faster. Here you'll find our solution to this 
+                requirements.
 """
 
 from random import choice
 from turtle import *
-import math
+import math  # importing math library for sqrt usage calculation
 
 from freegames import floor, vector
 
@@ -26,6 +32,8 @@ ghosts = [
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
 ]
+
+# Here the map was changed for the creation of new route
 # fmt: off
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -133,8 +141,9 @@ def move():
 
     for point, course in ghosts:
 
+        # in case user can still move forward.
         if valid(point + course):
-            # in case there is no other option
+            # Making the ghosts move fastar by 2
             point.move(course*2)
         else:
             options = [
@@ -145,49 +154,23 @@ def move():
             ]
             plan = choice(options)
 
+            # Foor loop for decition making for making ghosts smarter.
+            # Gohsts will move depending on the route that is posible
+            # and it make it get closer to pacman.
             min_num = 1000
             min_num_index = 10
             for i in range(len(options)):
                 if valid(point + options[i]):
-                    dist = math.sqrt((  (point.x + options[i].x) - pacman.x)**2 +(  (point.y + options[i].y) - pacman.y)**2)
+
+                    # Calculates ditance in case next posible movement.
+                    dist = math.sqrt(((point.x + options[i].x) - pacman.x)**2 + ((point.y + options[i].y) - pacman.y)**2)
+
+                    # Checks wether distance is shorte than another
+                    # previoud route.
                     if dist < min_num:
                         min_num = dist
                         min_num_index = i
             plan = options[min_num_index]
-            #if (point.x - pacman.x)**2 > (point.y - pacman.y)**2:
-            #    if point.x < pacman.x:
-            #        if valid(point + options[0]):
-            #            print("->")
-            #            plan = options[0]
-            #        else:
-            #            print("<-")
-            #            plan = options[1]
-            #    elif point.x > pacman.x:
-            #        if valid(point + options[1]):
-            #            print("<-")
-            #            plan = options[1]
-            #        else:
-            #            print("->")
-            #            plan = options[0]
-            #    else:
-            #        pass
-            #elif (point.x - pacman.x)**2 < (point.y - pacman.y)**2:
-            #    if point.y < pacman.y:
-            #        if valid(point + options[2]):
-            #            print("^")
-            #            plan = options[2]
-            #        else:
-            #            print("v")
-            #            plan = options[3]
-            #    elif point.y > pacman.y:
-            #        if valid(point + options[3]):
-            #            print("v")
-            #            plan = options[3]
-            #        else:
-            #            print("^")
-            #            plan = options[2]
-            #    else:
-            #        pass
             course.x = plan.x
             course.y = plan.y
 

@@ -1,19 +1,19 @@
-"""Game: memory2.0.py
-
-This is a new version of the memory.py game.
-It is intended to change the numbers of each
-tile to be a random generated color square.
+"""Game:        Memory - Freegames
+Programmer1:    Luis Angel Gonzalez Tapia
+Programmar2:    Héctor Miranda García
+Date:           9 / may / 2022
+Description:    This is the version 2.0 of the game momory. 
+                As said on the documentation of the first version,
+                what we did for this version was to change the values
+                under the tiles to be colors, instead of interger
+                numbers. Basically is the same as version 1.0, but 
+                wit the values under the tiles being colors.
 """
-"""Memory, puzzle game of number pairs.
 
-Exercises:
 
-1. Count and print how many taps occur.
-2. Decrease the number of tiles to a 4x4 grid.
-3. Detect when all tiles are revealed.
-4. Center single-digit tile.
-5. Use letters instead of tiles.
-"""
+
+
+
 
 from random import *
 from turtle import *
@@ -22,15 +22,16 @@ from freegames import path
 
 car = path('car.gif')
 
-"""Tiles generates a list with 64 integers
-    ranging from 0 to 31. When started the
-    game, the tiles or numbers in list are
-    shuffled.
-"""
+# Tiles generates a list with 64 integers
+# ranging from 0 to 31. When started the
+# game, the tiles or numbers in list are
+# shuffled.
+
 screen = Screen()
 tiles = list(range(32)) * 2 
 state = {'mark': None}
 hide = [True] * 64
+
 # Atributos para el puntaje
 writer = Turtle(visible=False)
 forma = {'score': 0}
@@ -95,8 +96,9 @@ def draw():
     """Draw image and tiles."""
     clear()
     goto(0, 0)
-    shape(car)  # here we are "printing" img
+    shape(car)  # here the car img gets printed
     stamp()
+
 
     for count in range(64):
         if hide[count]:
