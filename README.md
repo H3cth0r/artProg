@@ -261,7 +261,7 @@ participated in the code, the date in which it was worked on and a
 brief description of this code. An example of this format 
 is shown below.
 
-*img_info_format*
+![information format](https://github.com/H3cth0r/artProg/blob/main/resources/doc_format.png?raw=true)
 
 In the case of the other aspects of the PEP-8 standard, the codes 
 were reviewed line by line while the standard was being revised, 
