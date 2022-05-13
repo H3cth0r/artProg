@@ -1,6 +1,6 @@
 """Game:        Memory - Freegames
 Programmer1:    Luis Angel Gonzalez Tapia
-Programmar2:    Héctor Miranda García
+Programmar2:    Hï¿½ctor Miranda Garcï¿½a
 Date:           9 / may / 2022
 Description:    This is the version 2.0 of the game momory. 
                 As said on the documentation of the first version,
@@ -60,7 +60,7 @@ def square(x, y):
     down()
     color('black', 'white')
     begin_fill()
-    for count in range(4):
+    for count in range(64):
         forward(50)
         left(90)
     end_fill()

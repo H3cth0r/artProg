@@ -26,7 +26,7 @@ changes made, according to the instructions of each activity.
 ## Collaborators
 
 Luis Angel Gonzales Tapia <br>
-Héctor Miranda García
+Hï¿½ctor Miranda Garcï¿½a
 
 ## Games 
 As said, we worked in some freegames module mini-games. For this
@@ -124,6 +124,13 @@ speed at which the ghosts now move will be faster.
 
 ## Memory
 
+The video game Memory the program is made up of several commands that 
+generate an image that is covered by 64 frames, it is in this way that 
+through the interaction of the screen you can see that each frame has a 
+symbol, when finding a similar symbol these these boxes disappear revealing 
+the image that is being covered by the entire grid. We were asked to add different 
+features, such as having a scoring system, letting the player know when they finished 
+all the boxes, centering the number that is in each box, and having different styles.
 
 
 ## Paint
