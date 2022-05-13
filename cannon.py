@@ -1,6 +1,6 @@
 """Game:        Cannon - Freegames
 Programmer1:    Luis Angel Gonzalez Tapia
-Programmar2:    Héctor Miranda García
+Programmar2:    Hector Miranda Garcia
 Date:           9 / may / 2022
 Description:    This game consist of proyectiles and targets. The
                 game is about aming to the targets using the cursor

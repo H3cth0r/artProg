@@ -1,6 +1,6 @@
 """Game:        Paint - Freegames
 Programmer 1:   Luis Angel Gonzalez Tapia
-Programmer 2:   Héctor Miranda García
+Programmer 2:   Hector Miranda Garcia
 Date:           9 / may / 2022
 Description:    Program that displays a window where the user is
                 able to use some commands with his keyboard for

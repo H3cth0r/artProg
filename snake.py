@@ -1,6 +1,6 @@
 """Game:        Snake - Freegames
 Programmer1:    Luis Angel Gonzalez Tapia
-Programmar2:    Héctor Miranda García
+Programmar2:    Hector Miranda Garcia
 Date:           9 / may / 2022
 Description:    This is a replica of the popular retro game named
                 "Snake". Here the user is able to control the game
