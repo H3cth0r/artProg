@@ -112,6 +112,8 @@ made automatically and easily.
 
 ![boardlist](https://github.com/H3cth0r/artProg/blob/main/resources/pacman_map_list.png?raw=true)
 
+![result](https://github.com/H3cth0r/artProg/blob/main/resources/pacman_result.png?raw=true)
+
 Subsequently, in the case of the approach of making the ghosts move 
 faster, what was done was to multiply the course followed by the 
 ghost by two, in this way it will be possible to observe that the 
