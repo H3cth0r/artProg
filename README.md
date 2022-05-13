@@ -102,7 +102,7 @@ in this way the ghosts will do everything possible to get closer to
 the user, until reaching it. The previous explanation and steps 
 followed for this approach can be seen in the following piece of code.
 
-*img_for_if_else_intelligent*
+![intelligent ghosts](https://github.com/H3cth0r/artProg/blob/main/resources/pacman_intelligent.png?raw=true)
 
 In the case of making changes to the board, this will be done easily; 
 For this, all you have to do is edit the list called tiles, which is 
@@ -110,7 +110,7 @@ presented in the form of a square, where each number 1 is an empty
 space or a path, and a 0 is a wall, in this way, of changes will be 
 made automatically and easily.
 
-*img_map_list*
+![boardlist](https://github.com/H3cth0r/artProg/blob/main/resources/pacman_map_list.png?raw=true)
 
 Subsequently, in the case of the approach of making the ghosts move 
 faster, what was done was to multiply the course followed by the 
@@ -118,7 +118,7 @@ ghost by two, in this way it will be possible to observe that the
 speed at which the ghosts now move will be faster.
 
 
-*img_spee_increase*
+![ghost speed](https://github.com/H3cth0r/artProg/blob/main/resources/pacman_speed.png?raw=true)
 
 ## Memory
 
