@@ -1,12 +1,19 @@
-"""Cannon, hitting targets with projectiles.
-
-Exercises
-
-1. Keep score by counting target hits.
-2. Vary the effect of gravity.
-3. Apply gravity to the targets.
-4. Change the speed of the ball.
+"""Game:        Cannon - Freegames
+Programmer1:    Luis Angel Gonzalez Tapia
+Programmar2:    Héctor Miranda García
+Date:           9 / may / 2022
+Description:    This game consist of proyectiles and targets. The
+                game is about aming to the targets using the cursor
+                and tu calculate the required energy to reach the 
+                target. The proyectile follows a parabolic trajectory
+                and the user is enabled to shoot a proyectile every
+                time there is non other proyectile in the map. For
+                this we were requiered to make the proyectile and the
+                displacement of the targets to move faster; we were
+                also required to make the game to be infinite, meaning
+                that the targets must reposition on the window.
 """
+
 
 from random import random, randrange
 from turtle import *
@@ -23,8 +30,9 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        # Cambie la frecuencia a la que se estaba dividiendo la velocidad de la pelota para que fuera 
-        # mas rapida
+        
+        # Changed frequency in which velocity was divided
+        # For making the movement faster.
         speed.x = (x + 200) /15
         speed.y = (y + 200) /15
 
@@ -57,7 +65,7 @@ def move():
         targets.append(target)
 
     for target in targets:
-        #Se cambio la velocidad de las pelotas azules
+        # Changed speed of the blue targets.
         target.x -= 2.5
 
     if inside(ball):
@@ -73,6 +81,7 @@ def move():
 
     draw()
 
+    # We rearange the target, to make the inifinite game
     for target in targets:
         if not inside(target):
             target.x=200
